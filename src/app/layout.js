@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         className={`${jetbrains_mono.variable} ${mondwest.variable} font-mono bg-primary-100`}
       >
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
