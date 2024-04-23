@@ -99,7 +99,7 @@ const emojiAnimation = {
 };
 
 const Sprites = () => {
-  const contentHeight = 1375;
+  const contentHeight = 1160;
   const [currentIndex, setCurrentIndex] = useState({
     spritesAnimation: 0,
     emojiAnimation: 0,

@@ -23,7 +23,7 @@ export default function Home() {
           <h2 className="sr-only">About</h2>
           <div className="px-4 pb-5 space-y-5 sm:px-5">
             <p>
-              I&apos;m a product designer from Malaysia with over 7 years of
+              I&apos;m a product designer from Malaysia with 7 years of
               experience as a frontend engineer.
             </p>
             <h2 className="sr-only">Current</h2>
@@ -41,14 +41,10 @@ export default function Home() {
           <h2 className="sr-only">Previous</h2>
           <div className="px-4 pt-8 pb-5 space-y-5 sm:px-5 sm:pt-10">
             <p>
-              I was a software engineer at Upstack Studio, where I developed
-              mobile apps with React Native based on client needs.
-            </p>
-            <p>
               Before that, I worked as a freelance frontend engineer for 7
               years, collaborating with SMEs and the government sector.
             </p>
-            <p>Here are some info nobody ever asked for:</p>
+            <p>Here&apos;s what I&apos;ve been up to nowadays:</p>
           </div>
 
           <div className="flex px-1">
@@ -70,8 +66,7 @@ export default function Home() {
               {/* Content */}
               <div className="flex-1 p-4 overflow-x-scroll text-white bg-primary-900 sm:p-5">
                 <pre>
-                  <code>{`let name = ‘Gideon Low’
-let location = ‘Kuala Lumpur, MY’
+                  <code>{`let location = ‘Kuala Lumpur, MY’
 let hobbies = [
     ‘Bouldering’,
     ‘Designing’,
@@ -100,12 +95,12 @@ let hobbies = [
           <h2 className="sr-only">Growing up</h2>
           <div className="px-4 pt-8 pb-5 space-y-5 sm:px-5 sm:pt-10">
             <p>
-              Growing up, I always had a passion for the piano and aspired to
-              become a pianist someday.
+              Growing up, I had a passion for classical music and aspired to
+              become a pianist.
             </p>
             <p>
-              Fast forward, I&apos;ve become a designer, but I still enjoy
-              playing the piano in my free time.
+              Today, I&apos;ve become a designer instead. I still enjoy playing
+              the piano occasionally.
             </p>
           </div>
 
@@ -115,7 +110,7 @@ let hobbies = [
           <div className="px-4 pt-8 space-y-8 sm:space-y-10 sm:h-[3.5rem] sm:px-5 sm:pt-10">
             <p>
               Thanks for visiting! If you want to chat, or just want to see what
-              I&apos;m up to, here are some of my online presence. Talk soon!
+              I&apos;m up to, here are some ways to get in touch. Talk soon!
             </p>
 
             <div className="flex justify-between">
