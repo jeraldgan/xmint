@@ -148,7 +148,7 @@ const piano = {
 
 const Key = ({ blackKeyWidth, note, isBlack = false }) => {
   const [play] = useSound(piano.sound[note], {
-    volume: 0.4,
+    volume: 0.5,
     interrupt: true,
   });
   const [isPressed, setIsPressed] = useState(false);
