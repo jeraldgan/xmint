@@ -114,7 +114,8 @@ const Sprites = () => {
   const [idleTimer, setIdleTimer] = useState(null);
   const [isAtBottom, setIsAtBottom] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isFirstScroll, setIsFirstScroll] = useState(false);
+  const [isFirstHover, setIsFirstHover] = useState(false);
   const [firstScrollUpAfterBottom, setFirstScrollUpAfterBottom] =
     useState(false);
 
@@ -138,8 +139,8 @@ const Sprites = () => {
   };
 
   const handleMouseEnter = () => {
-    if (!isHovered) {
-      setIsHovered(true);
+    if (!isFirstHover) {
+      setIsFirstHover(true);
       setIsTyping(false);
     } else {
       setIsTyping(true);
@@ -178,6 +179,10 @@ const Sprites = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      if (!isFirstScroll) {
+        setIsFirstScroll(true);
+      }
+
       const currentScrollY = window.scrollY;
       let directionToSet = spritesAnimation.right;
 
@@ -282,7 +287,7 @@ const Sprites = () => {
         <div
           className="relative w-10 h-10 ml-5 -mt-10 overflow-hidden transition-opacity duration-200 opacity-0 group-hover:opacity-100"
           style={{
-            opacity: !isHovered ? 100 : ``,
+            opacity: !isFirstHover && isFirstScroll ? 100 : ``,
           }}
         >
           <div
