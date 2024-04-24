@@ -158,14 +158,14 @@ const Modal = ({ name, isOpen, onClose }) => {
           >
             {buttonState === "default" ? (
               <Image
-                className="w-[5.625rem] h-auto"
+                className="w-[5.625rem] h-auto pointer-events-none"
                 src={ButtonDefault}
                 alt="Close button"
                 priority
               />
             ) : (
               <Image
-                className="w-[5.625rem] h-auto"
+                className="w-[5.625rem] h-auto pointer-events-none"
                 src={ButtonPressed}
                 alt="Close button"
               />

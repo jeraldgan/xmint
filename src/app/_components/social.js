@@ -38,7 +38,7 @@ const Social = () => {
         className="relative cursor-pointer group"
       >
         <Image
-          className="h-[3rem] sm:h-[3.75rem] w-auto"
+          className="h-[3rem] sm:h-[3.75rem] w-auto pointer-events-none"
           src={mail}
           alt="Mail"
           width={60}
@@ -50,7 +50,7 @@ const Social = () => {
           }`}
         >
           <Image
-            className={`h-[1.5rem] sm:h-[1.875rem] duration-300 transition-opacity w-auto ${
+            className={`h-[1.5rem] sm:h-[1.875rem] duration-300 transition-opacity w-auto pointer-events-none ${
               isCopied ? "opacity-0" : "opacity-100"
             }`}
             src="/images/copy.png"
@@ -59,7 +59,7 @@ const Social = () => {
             height={30}
           />
           <Image
-            className={`h-[1.5rem] sm:h-[1.875rem] duration-300 transition-opacity w-auto absolute inset-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 ${
+            className={`h-[1.5rem] sm:h-[1.875rem] duration-300 transition-opacity w-auto absolute inset-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none ${
               isCopied ? "opacity-100" : "opacity-0"
             }`}
             src="/images/check.png"
@@ -75,7 +75,7 @@ const Social = () => {
         className="cursor-pointer"
       >
         <Image
-          className="h-[3rem] sm:h-[3.75rem] w-auto"
+          className="h-[3rem] sm:h-[3.75rem] w-auto pointer-events-none"
           src={x}
           alt="X"
           width={60}
@@ -88,7 +88,7 @@ const Social = () => {
         className="cursor-pointer"
       >
         <Image
-          className="h-[3rem] sm:h-[3.75rem] w-auto"
+          className="h-[3rem] sm:h-[3.75rem] w-auto pointer-events-none"
           src={linkedin}
           alt="LinkedIn"
           width={60}
@@ -101,7 +101,7 @@ const Social = () => {
         className="cursor-pointer"
       >
         <Image
-          className="h-[3rem] sm:h-[3.75rem] w-auto"
+          className="h-[3rem] sm:h-[3.75rem] w-auto pointer-events-none"
           src={layers}
           alt="Layers"
           width={60}
@@ -114,7 +114,7 @@ const Social = () => {
         className="cursor-pointer"
       >
         <Image
-          className="h-[3rem] sm:h-[3.75rem] w-auto"
+          className="h-[3rem] sm:h-[3.75rem] w-auto pointer-events-none"
           src={dribbble}
           alt="Dribbble"
           width={60}

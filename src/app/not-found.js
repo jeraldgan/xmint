@@ -25,14 +25,14 @@ const NotFound = () => {
         >
           {buttonState === "default" ? (
             <Image
-              className="w-[5rem] h-auto"
+              className="w-[5rem] h-auto pointer-events-none"
               src={ButtonDefault}
               alt="Close button"
               priority
             />
           ) : (
             <Image
-              className="w-[5rem] h-auto"
+              className="w-[5rem] h-auto pointer-events-none"
               src={ButtonPressed}
               alt="Close button"
             />

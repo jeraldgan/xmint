@@ -299,7 +299,7 @@ const Sprites = () => {
             }}
           >
             <Image
-              className="w-full h-full"
+              className="w-full h-full pointer-events-none"
               alt="Emoji"
               src={emoji}
               quality={100}
@@ -315,7 +315,7 @@ const Sprites = () => {
             }}
           >
             <Image
-              className="w-full h-full"
+              className="w-full h-full pointer-events-none"
               alt="Sprites"
               src={spriteSheet}
               quality={100}
@@ -324,7 +324,7 @@ const Sprites = () => {
           </div>
         </div>
         <Image
-          className="relative -z-10 -mt-[0.625rem]"
+          className="relative -z-10 -mt-[0.625rem] pointer-events-none"
           src={shadow}
           alt="Shadow"
           width={40}
