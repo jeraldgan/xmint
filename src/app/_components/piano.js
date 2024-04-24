@@ -156,6 +156,9 @@ const Key = ({ blackKeyWidth, note, isBlack = false }) => {
   const handleKeyDown = (e) => {
     e.preventDefault();
     setIsPressed(true);
+    setTimeout(() => {
+      setIsPressed(false);
+    }, 450);
     play();
   };
 
