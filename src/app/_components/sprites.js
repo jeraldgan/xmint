@@ -114,6 +114,7 @@ const Sprites = () => {
   const [idleTimer, setIdleTimer] = useState(null);
   const [isAtBottom, setIsAtBottom] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
   const [firstScrollUpAfterBottom, setFirstScrollUpAfterBottom] =
     useState(false);
 
@@ -137,10 +138,15 @@ const Sprites = () => {
   };
 
   const handleMouseEnter = () => {
-    setIsTyping(true);
-    setTimeout(() => {
+    if (!isHovered) {
+      setIsHovered(true);
       setIsTyping(false);
-    }, 1200);
+    } else {
+      setIsTyping(true);
+      setTimeout(() => {
+        setIsTyping(false);
+      }, 1200);
+    }
   };
 
   const handleMouseLeave = () => {
@@ -273,7 +279,12 @@ const Sprites = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="relative w-10 h-10 ml-5 -mt-10 overflow-hidden transition-opacity duration-200 opacity-0 group-hover:opacity-100">
+        <div
+          className="relative w-10 h-10 ml-5 -mt-10 overflow-hidden transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+          style={{
+            opacity: !isHovered ? 100 : ``,
+          }}
+        >
           <div
             className="w-[200px] h-[200px] absolute"
             style={{
