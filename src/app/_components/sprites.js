@@ -141,7 +141,14 @@ const Sprites = () => {
   const handleMouseEnter = () => {
     if (!isFirstHover) {
       setIsFirstHover(true);
-      setIsTyping(false);
+
+      if (isFirstScroll) {
+        setIsTyping(false);
+      } else {
+        setTimeout(() => {
+          setIsTyping(false);
+        }, 1200);
+      }
     } else {
       setIsTyping(true);
       setTimeout(() => {
