@@ -316,7 +316,7 @@ const Sprites = () => {
           >
             <Image
               className="w-full h-full pointer-events-none"
-              alt="Sprites"
+              alt="Modified based on the Hana Caraka - Base Character by Bagong Games"
               src={spriteSheet}
               quality={100}
               priority
