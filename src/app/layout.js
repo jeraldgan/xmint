@@ -20,7 +20,7 @@ const mondwest = localFont({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://preview.bygideon.com"),
+  metadataBase: new URL("https://bygideon.com"),
   title: "Gideon - Product Designer",
   description:
     "Hey! I'm Gideon, a product designer from Malaysia with 7 years of experience as a frontend engineer.",
