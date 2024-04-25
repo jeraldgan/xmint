@@ -168,6 +168,7 @@ const Modal = ({ name, isOpen, onClose }) => {
                 className="w-[5.625rem] h-auto pointer-events-none"
                 src={ButtonPressed}
                 alt="Close button"
+                priority
               />
             )}
           </button>

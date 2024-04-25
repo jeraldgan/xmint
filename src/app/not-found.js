@@ -35,6 +35,7 @@ const NotFound = () => {
               className="w-[5rem] h-auto pointer-events-none"
               src={ButtonPressed}
               alt="Close button"
+              priority
             />
           )}
         </Link>
