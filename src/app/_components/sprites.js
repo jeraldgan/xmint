@@ -100,6 +100,10 @@ const emojiAnimation = {
 
 const Sprites = () => {
   const contentHeight = 1160;
+  const getRandomEmojiKey = () => {
+    const keys = Object.keys(emojiAnimation).filter((key) => key !== "typing");
+    return keys[Math.floor(Math.random() * keys.length)];
+  };
   const [currentIndex, setCurrentIndex] = useState({
     spritesAnimation: 0,
     emojiAnimation: 0,
@@ -108,7 +112,10 @@ const Sprites = () => {
   const [currentDirection, setCurrentDirection] = useState(
     spritesAnimation.right
   );
-  const [currentEmoji, setCurrentEmoji] = useState(emojiAnimation.smiley);
+  const initialEmojiKey = getRandomEmojiKey();
+  const [currentEmoji, setCurrentEmoji] = useState(
+    emojiAnimation[initialEmojiKey]
+  );
   const [isTyping, setIsTyping] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [idleTimer, setIdleTimer] = useState(null);
