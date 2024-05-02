@@ -35,60 +35,6 @@ const piano = {
     Eb5: "/audios/piano/Eb5.mp3",
     E5: "/audios/piano/E5.mp3",
   },
-  //     desktop: [
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "B",
-  //      "W",
-  //     ],
-  //     mobile: [
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "B",
-  //      "W",
-  //      "W",
-  //     ],
-  //   },
   layout: {
     desktop: [
       "C3",
@@ -335,7 +281,7 @@ const Key = ({ blackKeyWidth, note, isBlack = false }) => {
             <div className="w-[0.3125rem] shrink-0 flex flex-col">
               <div className="w-full h-[0.3125rem] flex shrink-0"></div>
               <div className="w-full h-[0.15625rem] flex shrink-0">
-                <div className="w-1/2 h-full bg-[#999999]"></div>
+                <div className="w-1/2 h-full bg-primary-400"></div>
                 <div className="w-1/2 h-full bg-black"></div>
               </div>
               <div className="w-full h-[0.15625rem] flex shrink-0">
@@ -347,7 +293,7 @@ const Key = ({ blackKeyWidth, note, isBlack = false }) => {
               </div>
               <div className="w-full h-[0.15625rem] flex shrink-0">
                 <div className="w-1/2 h-full bg-black"></div>
-                <div className="w-1/2 h-full bg-[#999999]"></div>
+                <div className="w-1/2 h-full bg-primary-400"></div>
               </div>
               <div className="w-full h-[0.15625rem] flex shrink-0">
                 <div className="w-full h-full bg-black"></div>
@@ -364,7 +310,7 @@ const Key = ({ blackKeyWidth, note, isBlack = false }) => {
                 <div className="w-full h-full bg-white"></div>
               </div>
               <div className="flex-1 w-full h-full">
-                <div className="w-full h-full bg-[#E6E6E6]">
+                <div className="w-full h-full bg-primary-100">
                   <span className="hidden">{note}</span>
                 </div>
               </div>
@@ -381,7 +327,7 @@ const Key = ({ blackKeyWidth, note, isBlack = false }) => {
               <div className="w-full h-[0.3125rem] flex shrink-0"></div>
               <div className="w-full h-[0.15625rem] flex shrink-0">
                 <div className="w-1/2 h-full bg-black"></div>
-                <div className="w-1/2 h-full bg-[#999999]"></div>
+                <div className="w-1/2 h-full bg-primary-400"></div>
               </div>
               <div className="w-full h-[0.15625rem] flex shrink-0">
                 <div className="w-full h-full bg-black"></div>
@@ -391,7 +337,7 @@ const Key = ({ blackKeyWidth, note, isBlack = false }) => {
                 <div className="w-1/2 h-full bg-black"></div>
               </div>
               <div className="w-full h-[0.15625rem] flex shrink-0">
-                <div className="w-1/2 h-full bg-[#999999]"></div>
+                <div className="w-1/2 h-full bg-primary-400"></div>
                 <div className="w-1/2 h-full bg-black"></div>
               </div>
               <div className="w-full h-[0.15625rem] flex shrink-0">
@@ -412,7 +358,7 @@ const Key = ({ blackKeyWidth, note, isBlack = false }) => {
             {/* Left */}
             <div className="w-[0.3125rem] shrink-0 flex flex-col">
               <div className="w-full h-[0.15625rem] flex shrink-0">
-                <div className="w-1/2 h-full bg-[#999999]"></div>
+                <div className="w-1/2 h-full bg-primary-400"></div>
                 <div className="w-1/2 h-full bg-black"></div>
               </div>
               <div className="w-full h-[0.15625rem] flex shrink-0">
@@ -424,7 +370,7 @@ const Key = ({ blackKeyWidth, note, isBlack = false }) => {
               </div>
               <div className="w-full h-[0.46875rem] flex shrink-0">
                 <div className="w-1/2 h-full bg-black"></div>
-                <div className="w-1/2 h-full bg-[#999999]"></div>
+                <div className="w-1/2 h-full bg-primary-400"></div>
               </div>
               <div className="w-full h-[0.15625rem] flex shrink-0">
                 <div className="w-full h-full bg-black"></div>
@@ -440,7 +386,7 @@ const Key = ({ blackKeyWidth, note, isBlack = false }) => {
                 <div className="w-full h-full bg-white"></div>
               </div>
               <div className="flex-1 w-full h-full">
-                <div className="w-full h-full bg-[#E6E6E6]">
+                <div className="w-full h-full bg-primary-100">
                   <span className="hidden">{note}</span>
                 </div>
               </div>
@@ -448,7 +394,7 @@ const Key = ({ blackKeyWidth, note, isBlack = false }) => {
                 <div className="w-full h-full bg-white"></div>
               </div>
               <div className="w-full h-[0.3125rem] flex shrink-0">
-                <div className="w-full h-full bg-[#999999]"></div>
+                <div className="w-full h-full bg-primary-400"></div>
               </div>
               <div className="w-full h-[0.15625rem] flex shrink-0">
                 <div className="w-full h-full bg-black"></div>
@@ -459,7 +405,7 @@ const Key = ({ blackKeyWidth, note, isBlack = false }) => {
             <div className="w-[0.3125rem] shrink-0 flex flex-col">
               <div className="w-full h-[0.15625rem] flex shrink-0">
                 <div className="w-1/2 h-full bg-black"></div>
-                <div className="w-1/2 h-full bg-[#999999]"></div>
+                <div className="w-1/2 h-full bg-primary-400"></div>
               </div>
               <div className="w-full h-[0.15625rem] flex shrink-0">
                 <div className="w-full h-full bg-black"></div>
@@ -469,7 +415,7 @@ const Key = ({ blackKeyWidth, note, isBlack = false }) => {
                 <div className="w-1/2 h-full bg-black"></div>
               </div>
               <div className="w-full h-[0.46875rem] flex shrink-0">
-                <div className="w-1/2 h-full bg-[#999999]"></div>
+                <div className="w-1/2 h-full bg-primary-400"></div>
                 <div className="w-1/2 h-full bg-black"></div>
               </div>
               <div className="w-full h-[0.15625rem] flex shrink-0">
@@ -522,54 +468,54 @@ const Piano = () => {
           <div className="w-full h-[0.9375rem] flex shrink-0">
             <div className="h-full w-[0.15625rem] bg-black"></div>
             <div className="h-full w-[0.15625rem] bg-white"></div>
-            <div className="h-full w-[1.25rem] bg-[#E6E6E6]"></div>
+            <div className="h-full w-[1.25rem] bg-primary-100"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0">
             <div className="h-full w-[0.15625rem] bg-black"></div>
             <div className="h-full w-[0.15625rem] bg-white"></div>
-            <div className="h-full w-[0.9375rem] bg-[#E6E6E6]"></div>
+            <div className="h-full w-[0.9375rem] bg-primary-100"></div>
             <div className="h-full w-[0.3125rem] bg-white"></div>
           </div>
           <div className="w-full h-[0.625rem] flex shrink-0">
             <div className="h-full w-[0.15625rem] bg-black"></div>
             <div className="h-full w-[0.15625rem] bg-white"></div>
-            <div className="h-full w-[0.9375rem] bg-[#E6E6E6]"></div>
+            <div className="h-full w-[0.9375rem] bg-primary-100"></div>
             <div className="h-full w-[0.15625rem] bg-white"></div>
-            <div className="h-full w-[0.15625rem] bg-[#999999]"></div>
+            <div className="h-full w-[0.15625rem] bg-primary-400"></div>
           </div>
           <div className="flex flex-1 w-full h-full">
             <div className="h-full w-[0.15625rem] bg-black"></div>
             <div className="h-full w-[0.15625rem] bg-white"></div>
-            <div className="h-full w-[0.9375rem] bg-[#E6E6E6]"></div>
+            <div className="h-full w-[0.9375rem] bg-primary-100"></div>
             <div className="h-full w-[0.15625rem] bg-white"></div>
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0">
             <div className="h-full w-[0.15625rem] bg-black"></div>
-            <div className="h-full w-[0.15625rem] bg-[#999999]"></div>
-            <div className="h-full w-[0.9375rem] bg-[#E6E6E6]"></div>
-            <div className="h-full w-[0.15625rem] bg-[#999999]"></div>
+            <div className="h-full w-[0.15625rem] bg-primary-400"></div>
+            <div className="h-full w-[0.9375rem] bg-primary-100"></div>
+            <div className="h-full w-[0.15625rem] bg-primary-400"></div>
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0">
             <div className="h-full w-[0.15625rem] bg-black"></div>
-            <div className="h-full w-[0.3125rem] bg-[#999999]"></div>
-            <div className="h-full w-[0.625rem] bg-[#E6E6E6]"></div>
-            <div className="h-full w-[0.3125rem] bg-[#999999]"></div>
+            <div className="h-full w-[0.3125rem] bg-primary-400"></div>
+            <div className="h-full w-[0.625rem] bg-primary-100"></div>
+            <div className="h-full w-[0.3125rem] bg-primary-400"></div>
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="w-full h-[0.46875rem] flex shrink-0">
             <div className="h-full w-[0.15625rem] bg-black"></div>
-            <div className="h-full w-[1.25rem] bg-[#999999]"></div>
+            <div className="h-full w-[1.25rem] bg-primary-400"></div>
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0">
             <div className="h-full w-[0.15625rem] bg-black"></div>
-            <div className="h-full w-[1.40625rem] bg-[#999999]"></div>
+            <div className="h-full w-[1.40625rem] bg-primary-400"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0 justify-end">
             <div className="h-full w-[0.15625rem] bg-black"></div>
-            <div className="h-full w-[1.25rem] bg-[#999999]"></div>
+            <div className="h-full w-[1.25rem] bg-primary-400"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0 justify-end">
             <div className="h-full w-[1.25rem] bg-black"></div>
@@ -585,19 +531,19 @@ const Piano = () => {
             <div className="w-full h-full bg-white"></div>
           </div>
           <div className="w-full h-[0.9375rem] flex shrink-0">
-            <div className="w-full h-full bg-[#E6E6E6]"></div>
+            <div className="w-full h-full bg-primary-100"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0">
             <div className="w-full h-full bg-white"></div>
           </div>
           <div className="w-full h-[0.625rem] flex shrink-0">
-            <div className="w-full h-full bg-[#999999]"></div>
+            <div className="w-full h-full bg-primary-400"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0">
             <div className="w-full h-full bg-black"></div>
           </div>
           {/* Content */}
-          <div className="w-full h-full relative flex-1 bg-[#B3B3B3]">
+          <div className="relative flex-1 w-full h-full bg-primary-300">
             <div className="w-full h-full p-1.5">
               <div
                 ref={pianoRef}
@@ -618,7 +564,7 @@ const Piano = () => {
             <div className="w-full h-full bg-black"></div>
           </div>
           <div className="w-full h-[0.3125rem] flex shrink-0">
-            <div className="w-full h-full bg-[#999999]"></div>
+            <div className="w-full h-full bg-primary-400"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0">
             <div className="w-full h-full bg-black"></div>
@@ -635,55 +581,55 @@ const Piano = () => {
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="w-full h-[0.9375rem] flex shrink-0">
-            <div className="h-full w-[1.25rem] bg-[#E6E6E6]"></div>
+            <div className="h-full w-[1.25rem] bg-primary-100"></div>
             <div className="h-full w-[0.15625rem] bg-white"></div>
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0">
             <div className="h-full w-[0.3125rem] bg-white"></div>
-            <div className="h-full w-[0.9375rem] bg-[#E6E6E6]"></div>
+            <div className="h-full w-[0.9375rem] bg-primary-100"></div>
             <div className="h-full w-[0.15625rem] bg-white"></div>
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="w-full h-[0.625rem] flex shrink-0">
-            <div className="h-full w-[0.15625rem] bg-[#999999]"></div>
+            <div className="h-full w-[0.15625rem] bg-primary-400"></div>
             <div className="h-full w-[0.15625rem] bg-white"></div>
-            <div className="h-full w-[0.9375rem] bg-[#E6E6E6]"></div>
+            <div className="h-full w-[0.9375rem] bg-primary-100"></div>
             <div className="h-full w-[0.15625rem] bg-white"></div>
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="flex w-full h-full">
             <div className="h-full w-[0.15625rem] bg-black"></div>
             <div className="h-full w-[0.15625rem] bg-white"></div>
-            <div className="h-full w-[0.9375rem] bg-[#E6E6E6]"></div>
+            <div className="h-full w-[0.9375rem] bg-primary-100"></div>
             <div className="h-full w-[0.15625rem] bg-white"></div>
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0">
             <div className="h-full w-[0.15625rem] bg-black"></div>
-            <div className="h-full w-[0.15625rem] bg-[#999999]"></div>
-            <div className="h-full w-[0.9375rem] bg-[#E6E6E6]"></div>
-            <div className="h-full w-[0.15625rem] bg-[#999999]"></div>
+            <div className="h-full w-[0.15625rem] bg-primary-400"></div>
+            <div className="h-full w-[0.9375rem] bg-primary-100"></div>
+            <div className="h-full w-[0.15625rem] bg-primary-400"></div>
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0">
             <div className="h-full w-[0.15625rem] bg-black"></div>
-            <div className="h-full w-[0.3125rem] bg-[#999999]"></div>
-            <div className="h-full w-[0.625rem] bg-[#E6E6E6]"></div>
-            <div className="h-full w-[0.3125rem] bg-[#999999]"></div>
+            <div className="h-full w-[0.3125rem] bg-primary-400"></div>
+            <div className="h-full w-[0.625rem] bg-primary-100"></div>
+            <div className="h-full w-[0.3125rem] bg-primary-400"></div>
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="w-full h-[0.46875rem] flex shrink-0">
             <div className="h-full w-[0.15625rem] bg-black"></div>
-            <div className="h-full w-[1.25rem] bg-[#999999]"></div>
+            <div className="h-full w-[1.25rem] bg-primary-400"></div>
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0">
-            <div className="h-full w-[1.40625rem] bg-[#999999]"></div>
+            <div className="h-full w-[1.40625rem] bg-primary-400"></div>
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0 justify-start">
-            <div className="h-full w-[1.25rem] bg-[#999999]"></div>
+            <div className="h-full w-[1.25rem] bg-primary-400"></div>
             <div className="h-full w-[0.15625rem] bg-black"></div>
           </div>
           <div className="w-full h-[0.15625rem] flex shrink-0 justify-start">
