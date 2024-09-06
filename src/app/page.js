@@ -4,6 +4,13 @@ import Social from "@/app/_components/social";
 import Projects from "@/app/_components/projects";
 
 export default function Home() {
+  const code = `let location = 'Kuala Lumpur, MY'
+let hobbies = [
+   'Bouldering',
+   'Designing',
+   'Traveling',
+]`;
+
   return (
     <main
       className={`relative antialiased tracking-wide text-lg cursor-default min-h-screen`}
@@ -64,14 +71,13 @@ export default function Home() {
               <div className="w-full h-[0.15625rem] bg-primary-300"></div>
               <div className="w-full h-[0.15625rem] bg-black"></div>
               {/* Content */}
-              <div className="flex-1 p-4 overflow-x-scroll text-white bg-primary-900 sm:p-5">
+              <div className="flex-1 py-4 pl-2 pr-4 overflow-x-scroll text-white bg-primary-900 sm:py-5 sm:pr-5">
                 <pre>
-                  <code>{`let location = ‘Kuala Lumpur, MY’
-let hobbies = [
-    ‘Bouldering’,
-    ‘Designing’,
-    ‘Traveling’,
-]`}</code>
+                  <code>
+                    {code.split("\n").map((line, index) => (
+                      <span key={index}>{line}</span>
+                    ))}
+                  </code>
                 </pre>
               </div>
               <div className="w-full h-[0.15625rem] bg-black"></div>
