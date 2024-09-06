@@ -3,6 +3,20 @@
 @tailwind utilities;
 
 @layer utilities {
+  pre {
+    counter-reset: line-numbering; /* Reset the counter */
+  }
+
+  pre code span {
+    counter-increment: line-numbering; /* Increment the counter */
+    @apply relative block pl-10;
+  }
+
+  pre code span::before {
+    content: counter(line-numbering); /* Display the counter value */
+    @apply absolute left-0 w-5 text-right text-primary-400;
+  }
+
   .crt-line {
     background-image: url(/images/crt-line.svg);
     background-size: 4px 4px;
