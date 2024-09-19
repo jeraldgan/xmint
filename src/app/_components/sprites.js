@@ -265,6 +265,7 @@ const Sprites = () => {
     idleTimer,
     isAtBottom,
     firstScrollUpAfterBottom,
+    isFirstScroll,
   ]);
 
   useEffect(() => {

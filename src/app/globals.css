@@ -9,12 +9,12 @@
 
   pre code span {
     counter-increment: line-numbering; /* Increment the counter */
-    @apply relative block pl-10;
+    @apply relative block pl-12;
   }
 
   pre code span::before {
     content: counter(line-numbering); /* Display the counter value */
-    @apply absolute left-0 w-5 text-right text-primary-400;
+    @apply absolute left-0 w-6 text-right text-primary-500;
   }
 
   .crt-line {

@@ -39,8 +39,6 @@ const NotFound = () => {
             />
           )}
         </Link>
-
-        <div className="absolute inset-x-0 bottom-0 w-full h-24 pointer-events-none modal-gradient -z-10"></div>
       </div>
       <div
         id="crt"
