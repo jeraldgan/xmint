@@ -14,10 +14,17 @@ import { ConnectKitButton } from "connectkit";
 import { useAccount } from "wagmi";
 import { parseEther } from "viem";
 import { useSendTransaction } from "wagmi";
-
+import { triggerTransferNFT } from "../../utils/triggerTransferNFT";
 const NFT = () => {
   const { address } = useAccount();
-  const { sendTransaction } = useSendTransaction();
+  const { sendTransactionAsync } = useSendTransaction();
+  const handleTransferNFT = async () => {
+    await sendTransactionAsync({
+      to: process.env.NEXT_PUBLIC_WALLET_ADDRESS,
+      value: parseEther("0.02"),
+    });
+    await triggerTransferNFT(address);
+  };
   return (
     <div className="flex items-center justify-center overflow-hidden">
       <div className="w-[393px] h-[852px] bg-[#020D09] scale-90">
@@ -36,7 +43,7 @@ const NFT = () => {
         <div className="h-full px-4 overflow-y-scroll pt-16 pb-[88px] scrollbar-hide">
           <div className="w-full aspect-square rounded-[4px] bg-white/10"></div>
 
-          <h1 className="mt-6 text-lg">Mad Lads #4112</h1>
+          <h1 className="mt-6 text-lg">Mad Lads #3</h1>
 
           <div className="flex gap-4 mt-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
             <div className="flex items-center gap-x-1.5 text-white/80">
@@ -60,12 +67,7 @@ const NFT = () => {
           {address ? (
             <button
               className="h-[44px] w-full bg-[#00FFA2] flex justify-center items-center mt-6 rounded-[6px]"
-              onClick={() =>
-                sendTransaction({
-                  to: "0xd2135CfB216b74109775236E36d4b433F1DF507B",
-                  value: parseEther("0.02"),
-                })
-              }
+              onClick={handleTransferNFT}
             >
               <p className="text-[#020D09] text-sm">Buy for {PRICE}</p>
             </button>
