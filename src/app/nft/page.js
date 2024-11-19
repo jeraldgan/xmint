@@ -3,6 +3,7 @@
 // app/home/page.js
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import BottomTabBar from "../_components/bottomTabBar";
 import {
   CaretLeft,
@@ -18,12 +19,14 @@ import { triggerTransferNFT } from "../../utils/triggerTransferNFT";
 const NFT = () => {
   const { address } = useAccount();
   const { sendTransactionAsync } = useSendTransaction();
+  const router = useRouter();
   const handleTransferNFT = async () => {
     await sendTransactionAsync({
       to: process.env.NEXT_PUBLIC_WALLET_ADDRESS,
       value: parseEther("0.02"),
     });
     await triggerTransferNFT(address);
+    router.push("/success");
   };
   return (
     <div className="flex items-center justify-center overflow-hidden">

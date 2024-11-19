@@ -1,7 +1,7 @@
 // app/home/page.js
 import React from "react";
 import Link from "next/link";
-import BottomTabBar from "@/app/_components/bottomTabBar";
+import BottomTabBar from "../_components/bottomTabBar";
 import { X, Smiley } from "@phosphor-icons/react/dist/ssr";
 
 const Success = () => {
