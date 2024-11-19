@@ -7,6 +7,7 @@ import { CaretLeft, UploadSimple } from "@phosphor-icons/react/dist/ssr";
 import cover from "../../../public/images/cover.png";
 import { PRICE } from "@/constants/price";
 const HomePage = () => {
+  const items = Array.from({ length: 12 }, (_, index) => index + 1);
   return (
     <div className="flex items-center justify-center overflow-hidden">
       <div className="w-[393px] h-[852px] bg-[#020D09] scale-90">
@@ -52,82 +53,13 @@ const HomePage = () => {
           </div>
 
           <div className="grid grid-cols-3 mt-4 gap-x-2 gap-y-3">
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
-            <Link href="/nft">
-              <div className="rounded-sm aspect-square bg-white/10"></div>
-              <p className="text-xs mt-1.5">#4112</p>
-              <p className="text-xs text-white/70">{PRICE}</p>
-            </Link>
+            {items.map((item) => (
+              <Link href="/nft" key={item}>
+                <div className="rounded-sm aspect-square bg-white/10"></div>
+                <p className="text-xs mt-1.5">#{item}</p>
+                <p className="text-xs text-white/70">{PRICE}</p>
+              </Link>
+            ))}
           </div>
         </div>
 
