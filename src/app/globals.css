@@ -3,62 +3,14 @@
 @tailwind utilities;
 
 @layer utilities {
-  pre {
-    counter-reset: line-numbering; /* Reset the counter */
+  /* For Webkit-based browsers (Chrome, Safari and Opera) */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 
-  pre code span {
-    counter-increment: line-numbering; /* Increment the counter */
-    @apply relative block pl-12;
-  }
-
-  pre code span::before {
-    content: counter(line-numbering); /* Display the counter value */
-    @apply absolute left-0 w-6 text-right text-primary-500;
-  }
-
-  .crt-line {
-    background-image: url(/images/crt-line.svg);
-    background-size: 4px 4px;
-    background-repeat: repeat;
-  }
-
-  .modal-gradient {
-    background-image: url(/images/modal-gradient.svg);
-    background-size: 5px 110px;
-    background-repeat: repeat-x;
-  }
-
-  .cursor-default {
-    cursor: url("/images/cursors/default.png") 0 0, default; /* Legacy */
-    cursor: url("/images/cursors/default.svg") 0 0, default; /* FF */
-    cursor: -webkit-image-set(
-          url("/images/cursors/default.png") 1x,
-          url("/images/cursors/default@2x.png") 2x
-        )
-        0 0,
-      default; /* Webkit */
-  }
-
-  .cursor-pointer {
-    cursor: url("/images/cursors/pointer.png") 6 0, pointer; /* Legacy */
-    cursor: url("/images/cursors/pointer.svg") 6 0, pointer; /* FF */
-    cursor: -webkit-image-set(
-          url("/images/cursors/pointer.png") 1x,
-          url("/images/cursors/pointer@2x.png") 2x
-        )
-        6 0,
-      pointer; /* Webkit */
-  }
-
-  .cursor-view {
-    cursor: url("/images/cursors/view.png") 8 8, pointer; /* Legacy */
-    cursor: url("/images/cursors/view.svg") 8 8, pointer; /* FF */
-    cursor: -webkit-image-set(
-          url("/images/cursors/view.png") 1x,
-          url("/images/cursors/view@2x.png") 2x
-        )
-        8 8,
-      pointer; /* Webkit */
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
