@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Deployed Cross Chain NFT Contract Addresses
+
+- **Sepolia**: `0x60BC9Aabe3C8bB4FeAebE1cADD784201b1A4aFF6`
+- **Avalanche**: `0x482636838ED4773994fB9BBBE488d02d8DE5C805`
+
 ## Getting Started
 
 First, run the development server:
