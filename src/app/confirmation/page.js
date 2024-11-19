@@ -1,7 +1,9 @@
+"use client";
+
 // app/home/page.js
 import React from "react";
 import Link from "next/link";
-import BottomTabBar from "@/app/_components/bottomTabBar";
+import BottomTabBar from "../_components/bottomTabBar";
 import { X, Image } from "@phosphor-icons/react/dist/ssr";
 
 const Confirmation = () => {

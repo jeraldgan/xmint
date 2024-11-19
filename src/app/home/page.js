@@ -1,11 +1,14 @@
+"use client";
+
 // app/home/page.js
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import BottomTabBar from "@/app/_components/bottomTabBar";
+import BottomTabBar from "../_components/bottomTabBar";
 import { CaretLeft, UploadSimple } from "@phosphor-icons/react/dist/ssr";
 import cover from "../../../public/images/cover.png";
-import { PRICE } from "@/constants/price";
+import { PRICE } from "../../constants/price";
+
 const HomePage = () => {
   const items = Array.from({ length: 12 }, (_, index) => index + 1);
   return (

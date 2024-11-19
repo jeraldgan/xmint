@@ -1,15 +1,21 @@
+"use client";
+
 // app/home/page.js
 import React from "react";
 import Link from "next/link";
-import BottomTabBar from "@/app/_components/bottomTabBar";
+import BottomTabBar from "../_components/bottomTabBar";
 import {
   CaretLeft,
   CornersOut,
   UploadSimple,
 } from "@phosphor-icons/react/dist/ssr";
-import { PRICE } from "@/constants/price";
+import { PRICE } from "../../constants/price";
+import { ConnectKitButton } from "connectkit";
+import { useAccount } from "wagmi";
 
 const NFT = () => {
+  const { address } = useAccount();
+  console.log(address);
   return (
     <div className="flex items-center justify-center overflow-hidden">
       <div className="w-[393px] h-[852px] bg-[#020D09] scale-90">
@@ -49,12 +55,29 @@ const NFT = () => {
             </div>
           </div>
 
-          <Link
-            href="/confirmation"
-            className="h-[44px] w-full bg-[#00FFA2] flex justify-center items-center mt-6 rounded-[6px]"
-          >
-            <p className="text-[#020D09] text-sm">Buy for {PRICE}</p>
-          </Link>
+          {address ? (
+            <Link
+              href="/confirmation"
+              className="h-[44px] w-full bg-[#00FFA2] flex justify-center items-center mt-6 rounded-[6px]"
+            >
+              <p className="text-[#020D09] text-sm">Buy for {PRICE}</p>
+            </Link>
+          ) : (
+            <ConnectKitButton.Custom>
+              {({ isConnected, show, truncatedAddress, ensName }) => {
+                return (
+                  <button
+                    onClick={show}
+                    className="h-[44px] w-full bg-[#00FFA2] flex justify-center items-center mt-6 rounded-[6px] text-[#020D09] text-sm"
+                  >
+                    {isConnected
+                      ? ensName ?? truncatedAddress
+                      : "Connect Wallet"}
+                  </button>
+                );
+              }}
+            </ConnectKitButton.Custom>
+          )}
 
           {/* <div className="flex gap-5 mt-8 border-b border-white/10">
             <p className="pb-3 border-b border-white">Attributes</p>

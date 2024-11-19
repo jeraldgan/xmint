@@ -1,3 +1,4 @@
+import { Providers } from "./providers";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,7 +13,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${jetbrains_mono.variable} font-mono bg-neutral-200 text-white`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
