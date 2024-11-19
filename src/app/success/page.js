@@ -1,3 +1,5 @@
+"use client";
+
 // app/home/page.js
 import React from "react";
 import Link from "next/link";
@@ -5,6 +7,9 @@ import BottomTabBar from "../_components/bottomTabBar";
 import { X, Smiley } from "@phosphor-icons/react/dist/ssr";
 
 const Success = () => {
+  const searchParams = new URLSearchParams(window.location.search);
+  const txHash = searchParams.get("txHash");
+
   return (
     <div className="flex items-center justify-center overflow-hidden">
       <div className="w-[393px] h-[852px] bg-[#020D09] scale-90">
@@ -26,10 +31,10 @@ const Success = () => {
           </div>
 
           <Link
-            href=""
-            className=" h-[44px] w-full bg-white/10 flex justify-center items-center mt-6 rounded-[6px]"
+            href={`https://testnet.axelarscan.io/gmp/${txHash}`}
+            className="h-[44px] w-full bg-white/10 flex justify-center items-center mt-6 rounded-[6px]"
           >
-            <p className="text-sm">Visit wallet</p>
+            <p className="text-sm">View transaction on Axelarscan</p>
           </Link>
         </div>
 

@@ -16,6 +16,7 @@ import { useAccount } from "wagmi";
 import { parseEther } from "viem";
 import { useSendTransaction } from "wagmi";
 import { triggerTransferNFT } from "../../utils/triggerTransferNFT";
+import Image from "next/image";
 const NFT = () => {
   const { address } = useAccount();
   const { sendTransactionAsync } = useSendTransaction();
@@ -25,8 +26,8 @@ const NFT = () => {
       to: process.env.NEXT_PUBLIC_WALLET_ADDRESS,
       value: parseEther("0.02"),
     });
-    await triggerTransferNFT(address);
-    router.push("/success");
+    const txHash = await triggerTransferNFT(address);
+    router.push(`/success?txHash=${txHash}`);
   };
   return (
     <div className="flex items-center justify-center overflow-hidden">
@@ -44,7 +45,13 @@ const NFT = () => {
         </header>
 
         <div className="h-full px-4 overflow-y-scroll pt-16 pb-[88px] scrollbar-hide">
-          <div className="w-full aspect-square rounded-[4px] bg-white/10"></div>
+          <Image
+            src="/images/smart-contract/3-desktop.png"
+            alt="NFT"
+            width={640}
+            height={800}
+            className="w-full aspect-square rounded-[4px] bg-white/10"
+          />
 
           <h1 className="mt-6 text-lg">Mad Lads #3</h1>
 

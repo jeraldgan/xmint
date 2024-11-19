@@ -18,8 +18,8 @@ export const triggerTransferNFT = async (walletAddress: `0x${string}`) => {
     address: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as `0x${string}`,
     abi: crossChainNFTAbi,
     functionName: "crossChainTransfer",
-    args: ["Avalanche", walletAddress, BigInt(1)],
+    args: ["Avalanche", walletAddress, BigInt(2)],
     value: parseEther("0.01"),
   });
-  console.log(tx);
+  return tx;
 };
