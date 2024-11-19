@@ -1,1 +1,1 @@
-export const PRICE = "0.1 AXAX";
+export const PRICE = "0.02 AXAX";

@@ -12,10 +12,12 @@ import {
 import { PRICE } from "../../constants/price";
 import { ConnectKitButton } from "connectkit";
 import { useAccount } from "wagmi";
+import { parseEther } from "viem";
+import { useSendTransaction } from "wagmi";
 
 const NFT = () => {
   const { address } = useAccount();
-  console.log(address);
+  const { sendTransaction } = useSendTransaction();
   return (
     <div className="flex items-center justify-center overflow-hidden">
       <div className="w-[393px] h-[852px] bg-[#020D09] scale-90">
@@ -56,12 +58,17 @@ const NFT = () => {
           </div>
 
           {address ? (
-            <Link
-              href="/confirmation"
+            <button
               className="h-[44px] w-full bg-[#00FFA2] flex justify-center items-center mt-6 rounded-[6px]"
+              onClick={() =>
+                sendTransaction({
+                  to: "0xd2135CfB216b74109775236E36d4b433F1DF507B",
+                  value: parseEther("0.02"),
+                })
+              }
             >
               <p className="text-[#020D09] text-sm">Buy for {PRICE}</p>
-            </Link>
+            </button>
           ) : (
             <ConnectKitButton.Custom>
               {({ isConnected, show, truncatedAddress, ensName }) => {
